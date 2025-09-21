@@ -1,6 +1,5 @@
 from mod import verification
 
-
 # crea un diccionario con el usuario, la contraseña, y las estadisticas verificadas
 def create_entry(user: str, pswd: str) -> dict:
     lower, upper, special, nums = verification.verify(pswd)

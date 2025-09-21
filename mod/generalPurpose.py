@@ -1,3 +1,5 @@
+import os
+
 # Algoritmo para ordenar las contraseña.
 # quicksort funciona de la siguiente manera
 # con una lista `arr`, 
@@ -18,3 +20,8 @@ def quicksort(arr: list[dict]) -> list[dict]:
         lo = [x for x in arr[1:] if len(x["password"]) < len(pivot)]
         hi = [x for x in arr[1:] if len(x["password"]) >= len(pivot)]
         return quicksort(lo) + [arr[0]] + quicksort(hi)
+
+# funcion que limpia la pantalla. Si el sistema operativo es Windows utiliza cls si es Unix-based utiliza clear
+
+def clear():
+    os.system('cls' if os.name == 'nt' else 'clear')
